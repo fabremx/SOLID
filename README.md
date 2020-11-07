@@ -7,7 +7,7 @@
 4. [I: I: Interface Segregation Principle](#I)
 4. [D: Dependency Inversion Principle](#D)
 
-### S: Single Responsibility Principle
+### S: Single Responsibility Principle <a name="S"></a>
 >"A class or function should only have one reason to change."
 
 ###### BAD
@@ -31,7 +31,7 @@ class Client {
 }
 ```
 
-###### GOOD
+✅ ###### GOOD
 
 ```js
 class Client {
@@ -58,7 +58,7 @@ class Client {
 }
 ```
 
-### O: Open-Closed Principle
+### O: Open-Closed Principle <a name="O"></a>
 >"A software artifact should be open for extension but closed for modification."
 
 Below a service able to make a trasaction through an external API
@@ -143,7 +143,7 @@ interface IPlateformService {
 }
 ```
 
-### L: Liskov-Substitution Principle
+### L: Liskov-Substitution Principle <a name="L"></a>
 >"To build software systems from interchangeable parts, those parts must adhere to a contract that allows those parts to be substituted one for another."
 
 ###### GOOD
@@ -155,12 +155,12 @@ interface IPlateformService {
 
 class PlateformAService implements IPlateformService {
     sendTransaction(transaction: any): void {
-        // Implement
+        // Implementation
     }
 }
 class PlateformBService implements IPlateformService {
     sendTransaction(transaction: any): void {
-        // Implement
+        // Implementation
     }
 }
 
@@ -184,7 +184,7 @@ const trader = new Trader(plateformAService);
 const trader = new Trader(plateformBService);
 ```
 
-### I: Interface Segregation Principle
+### I: Interface Segregation Principle <a name="I"></a>
 >"Prevent classes from relying on things that they dont need."
 
 ###### BAD
@@ -225,7 +225,7 @@ class Trader implements TraderEmployee {
 }
 ```
 
-### D: Dependency Inversion Principle
+### D: Dependency Inversion Principle <a name="D"></a>
 >"Abstractions should not depend on details. Details should depend on abstractions."
 
 ###### BAD
@@ -268,7 +268,7 @@ interface IMailService {
 
 class SendGridEmailService implements IMailService {
     sendMail(email: Email): Promise<EmailTransmissionResult> {
-        // Implement
+        // Implementation
     }
 }
 
