@@ -10,7 +10,7 @@
 ### S: Single Responsibility Principle <a name="S"></a>
 >"A class or function should only have one reason to change."
 
-###### BAD
+❌ **BAD**
 
 ```js
 class Client {
@@ -31,7 +31,7 @@ class Client {
 }
 ```
 
-✅ ###### GOOD
+✅ **GOOD**
 
 ```js
 class Client {
@@ -79,7 +79,7 @@ class TransactionService {
 
 We want to add new plateforms in order to make transaction with Traders ...
 
-###### BAD
+❌ **BAD**
 
 ```js
  class Trader {
@@ -116,7 +116,7 @@ class SendTransactionService {
 }
 ```
 
-###### GOOD
+✅ **GOOD**
 
 ```js
 interface IPlateformService {
@@ -146,7 +146,7 @@ interface IPlateformService {
 ### L: Liskov-Substitution Principle <a name="L"></a>
 >"To build software systems from interchangeable parts, those parts must adhere to a contract that allows those parts to be substituted one for another."
 
-###### GOOD
+✅ **GOOD**
 
 ```js
 interface IPlateformService {
@@ -187,7 +187,7 @@ const trader = new Trader(plateformBService);
 ### I: Interface Segregation Principle <a name="I"></a>
 >"Prevent classes from relying on things that they dont need."
 
-###### BAD
+❌ **BAD**
 
 ```js
 interface Employee {
@@ -205,7 +205,7 @@ class BankEmployee implements Employee {
 }
 ```
 
-###### GOOD
+✅ **GOOD**
 
 ```js
 interface TraderEmployee {
@@ -228,7 +228,7 @@ class Trader implements TraderEmployee {
 ### D: Dependency Inversion Principle <a name="D"></a>
 >"Abstractions should not depend on details. Details should depend on abstractions."
 
-###### BAD
+❌ **BAD**
 
 ```js
 class User {
@@ -258,7 +258,7 @@ class CreateUserController {
 }
 ```
 
-###### GOOD
+✅ **GOOD**
 
 ```js
 interface IMailService {
