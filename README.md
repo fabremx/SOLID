@@ -121,16 +121,17 @@ class SendTransactionService {
 ```js
 interface IPlateformService {
     sendTransaction(transaction: any): void
-  }
-  
-  class SendPlateformAService implements IPlateformService {
-    sendTransaction(transaction: any): void {}
-  }
-  class SendPlateformBService implements IPlateformService {
-    sendTransaction(transaction: any): void {}
-  }
+}
 
-  class Trader {
+class SendPlateformAService implements IPlateformService {
+    sendTransaction(transaction: any): void {}
+}
+
+class SendPlateformBService implements IPlateformService {
+    sendTransaction(transaction: any): void {}
+}
+
+class Trader {
     private plateformeService: IPlateformService;
 
     constructor (plateformeService: IPlateformService) {
@@ -211,9 +212,11 @@ class BankEmployee implements Employee {
 interface TraderEmployee {
     makeTransaction();
 }
+
 interface BankEmployee {
     allowBankLoan();
 }
+
 interface CaptainAmericaWeapon {
     Sheild();
 }
